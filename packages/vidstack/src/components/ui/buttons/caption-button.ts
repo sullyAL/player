@@ -63,6 +63,9 @@ export class CaptionButton extends Component<CaptionButtonProps, {}, CaptionButt
 
   #isHidden() {
     const { hasCaptions } = this.#media.$state;
-    return !hasCaptions();
+
+    // Show the button for now regardless of whether captions are available, as the UI for adding captions is still in development. Once that is complete, we can uncomment the line below to hide the button when captions are not available.
+    return false;
+    // return !hasCaptions();
   }
 }

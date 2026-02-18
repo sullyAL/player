@@ -33,7 +33,10 @@ export class CaptionsRadioGroup extends Component<
   @prop
   get disabled() {
     const { hasCaptions } = this.#media.$state;
-    return !hasCaptions();
+
+    // For now, we'll always enable the captions menu even if there are no caption tracks.
+    return false;
+    //return !hasCaptions();
   }
 
   constructor() {
